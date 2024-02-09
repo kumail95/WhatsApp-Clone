@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp</title>
+    <link rel="stylesheet" href="./css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="header">
+
+            <h1>WhatsApp</h1>
+            <div class="icons">
+                <i class="fa fa-camera"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i onclick="toggleDarkMode()" class="fa-regular fa-moon"></i>
+                <i onclick="toggleDarkMode()" class="suns fa-regular fa-sun"></i>
+            </div>
+
+        </div>
+
+        <div class="nav">
+            <i class="fa-solid fa-users"></i>
+            <p>Chats</p>
+            <p>Updates</p>
+            <p>Calls</p>
+        </div>
+
+        <div class="msgbox">
+
+
+
+            <div class="msg">
+                <img src="./dp_1.jpg" height="50" width="70" alt="">
+                <div class="g_name">
+                    <p class="p1">Kumail</p>
+                    <p class="p2">Ok</p>
+                </div>
+                <div class="time">
+                    7.36 AM
+                </div>
+            </div>
+
+
+
+            <div class="msg">
+                <img src="./dp_1.jpg" height="50" width="70" alt="">
+                <div class="g_name">
+                    <p class="p1">Kumail</p>
+                    <p class="p2">Ok</p>
+                </div>
+                <div class="time">
+                    7.36 AM
+                </div>
+            </div>
+
+
+            <div class="msg">
+                <img src="./dp_1.jpg" height="50" width="70" alt="">
+                <div class="g_name">
+                    <p class="p1">Kumail</p>
+                    <p class="p2">Ok</p>
+                </div>
+                <div class="time">
+                    7.36 AM
+                </div>
+            </div>
+
+
+
+            <div class="msg">
+                <img src="./dp_1.jpg" height="50" width="70" alt="">
+                <div class="g_name">
+                    <p class="p1">Kumail</p>
+                    <p class="p2">Ok</p>
+                </div>
+                <div class="time">
+                    7.36 AM
+                </div>
+            </div>
+
+
+            <div class="msg">
+                <img src="./dp_1.jpg" height="50" width="70" alt="">
+                <div class="g_name">
+                    <p class="p1">Kumail</p>
+                    <p class="p2">Ok</p>
+                </div>
+                <div class="time">
+                    7.36 AM
+                </div>
+            </div>
+
+
+
+            <div class="contact">
+                <i class=" coni fa-solid fa-message"></i>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        // Dark mode aur light mode ke liye toggle function
+        function toggleDarkMode() {
+            // Header, navigation, message box, aur contact element ko select karen
+            var main = document.querySelector('.main');
+            var header = document.querySelector('.header');
+            var nav = document.querySelector('.nav');
+            var msgbox = document.querySelector('.msgbox');
+            var p1 = document.querySelectorAll('.p1');
+            var contacts = document.querySelector('.contact');
+            var contacts_icon = document.querySelector('.contact > .coni');
+            var icons = document.querySelectorAll('.icons > i');
+            var isDarkMode = main.style.backgroundColor === 'black';
+
+
+            // Agar body ka background color #059862 hai toh dark mode ko enable karein
+            if (isDarkMode) {
+                
+
+                header.style.backgroundColor = '#059862';
+                header.style.color = 'white';
+                main.style.backgroundColor = 'white';
+                nav.style.backgroundColor = '#059862';
+                nav.style.color = 'white';
+                msgbox.style.backgroundColor = 'white';
+                contacts.style.backgroundColor = '#059862';
+                contacts.style.borderColor = '#059862';
+                icons.forEach(icon => {
+                    icon.style.color = 'black';
+                });
+
+                p1.forEach(ps => {
+                    ps.style.color = 'black';
+                });
+
+
+                document.querySelector('.fa-sun').style.display = 'none';
+                document.querySelector('.fa-moon').style.display = 'inline-block';
+
+
+
+
+            }
+
+            else { // Otherwise, light mode ko enable karein
+                main.style.backgroundColor = 'black';
+                header.style.backgroundColor = '#38434e';
+                header.style.color = 'white';
+                nav.style.backgroundColor = '#38434e';
+                nav.style.color = 'white';
+                msgbox.style.backgroundColor = 'black';
+                contacts.style.backgroundColor = '#059862';
+                contacts.style.borderColor = '#059862';
+                contacts_icon.style.color = 'black';
+
+                icons.forEach(icon => {
+                    icon.style.color = 'white';
+                });
+
+                p1.forEach(ps => {
+                    ps.style.color = 'white';
+                });
+
+                document.querySelector('.fa-sun').style.display = 'inline-block';
+                document.querySelector('.fa-moon').style.display = 'none';
+
+            }
+        }
+
+
+
+        var moonIcon = document.querySelector('.fa-regular.fa-moon');
+        var sunIcon = document.querySelector('.fa-regular.fa-sun');
+
+        // Icon par click karne par toggleTheme function call karein
+        moonIcon.addEventListener('click', toggleTheme);
+        sunIcon.addEventListener('click', toggleTheme);
+
+
+
+        if (document.body.style.backgroundColor === 'rgb(0, 0, 0)') {
+            moonIcon.style.display = 'none';
+            sunIcon.style.display = 'inline-block';
+        } else {
+            sunIcon.style.display = 'inline-block';
+            moonIcon.style.display = 'none';
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

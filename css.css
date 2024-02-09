@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+body{
+    /* background-color: rgb(0, 0, 0); */
+
+}
+
+.main{
+    background-color: white;
+    width: 30vw;
+    height: 80vh;
+    /* margin: auto; */
+}
+
+.header{
+    /* border: 1px solid red; */
+    color: white;
+    background-color: #059862;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    
+}
+
+.icons{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icons .suns{
+    display: none;
+}
+
+.header h1{
+    display: inline-block;
+    font-family: roboto;
+    cursor: pointer;
+    color:white;
+}
+
+.nav{
+    /* border: 1px solid red; */
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 25px 0px 10px; 
+    font-family: roboto;
+    color: white;
+    cursor: pointer; 
+    background-color: #059862;
+}
+
+.msgbox{
+    height: 76%;
+    /* overflow: auto; */
+    position: relative;
+
+}
+
+.msg{
+    padding: 5px 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    margin: 8px 0px;
+}
+
+
+.g_name p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.p1{
+    color: black;
+    font-family: roboto;
+    font-size: 19px;
+}
+
+
+.p2{
+    color: grey;
+    font-family: roboto;
+    font-size: 14px;
+}
+
+.time{
+    display: flex;
+    justify-content: end;
+    width: 370px;
+    color: grey;
+    font-family: roboto;
+    font-size: 10px;
+}
+
+.g_name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 10px;
+}
+
+.msg img{
+    border-radius: 50%;
+}
+
+.contact{
+    position: sticky;
+    bottom: 138px;
+    float: right;
+    border: 1px solid #059862;
+    background-color: #059862;
+    border-radius: 14px;
+    padding: 12px;
+    margin: 10px;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.contact i{
+    font-size: 25px;
+    color: white;
+}
+
+
+
+
+.nav :hover{
+    color: #059862;
+    text-decoration: underline #059862;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+    transition: color 0.5s ease-in, text-decoration 0.5s ease-in;   
+}
+
+.icons :hover{
+    color: #059862;
+    transition: color 0.5s ease-in;
+
+}
+
+.header h1:hover{
+    color: white;
+    transition: color 0.5s ease-in-out;
+
+}
+
+.p1:hover{
+    color: #059862;
+    transition: color 0.5s ease-in;
+
+    
+}
+
+
+
+@media (max-width: 430px) {
+    .main {
+        width: 100%;
+        height: 100%;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .icons {
+        font-size: 16px;
+    }
+
+    .nav {
+        font-size: 14px;
+    }
+
+    .msgbox {
+        height: calc(80vh - 180px);
+    }
+}
